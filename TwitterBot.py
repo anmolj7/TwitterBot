@@ -25,7 +25,8 @@ class Bot:
 
     def __init__(self):
         self.options = Options()
-        self.driver = webdriver.Chrome(executable_path='chromedriver.exe', options=self.options)
+        self.driver = webdriver.Chrome(executable_path='chromedriver.exe', options=self.options)  # You'd have to
+        # change the Chromedriver.exe path, according to your system.
         self.login()
 
     def login(self):
@@ -61,7 +62,7 @@ class Bot:
     def exit(self):
         self.driver.quit()
 
-        
+
 def main():
     bot = Bot()
     bot.tweet('Hello!!!!!')
